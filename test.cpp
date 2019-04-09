@@ -42,13 +42,13 @@ Person* CreateFamilyTree()
 	//root->brother.push_back()
 } 
 
-void Children(Person *r)//后代模拟 
+void Children(Person *r, string n)//后代模拟 
 {
 	Person *p;
 	//p = (Person*)malloc(sizeof(Person *));//用不了卧槽 
 	p = new Person;
 	p->father = r;
-	p->name = "ye";
+	p->name = n;
 	
 	for(auto v:p->brother)
 	    v=NULL;
@@ -73,12 +73,12 @@ int main()
 	root = CreateFamilyTree(); 
 	
 	cout<<root->name;
-	Children(root);
-	
+	Children(root,"ye");
+	Children(root,"mo");
 	//输出始祖第一个孩子的姓名
 	cout<<endl; 
-	cout<<(root->child)[0]->name; 
-	
+	cout<<(root->child)[0]->name<<endl; 
+	cout<<(root->child)[1]->name<<endl;
 	/*
 	//输出所有孩子的姓名  
 	for(auto v:root->child)
