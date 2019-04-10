@@ -50,25 +50,73 @@ void addMember(Person *t)
 	t->child.push_back(CreateFamilyTree()); 
 } 
 
+bool haveThePerson(Person* s,string na);
 //按名字查找结点，以便给他添加后代 
 Person* searchPerson(string na)
 {
 	Person *s=root;
 	
-	while(s->name != na)
-	{
+	if(s->name == na)return s;
+	else{
+		//根节点没有，从他的孩子中找
+		//if 有没有？？？ 
+		//没有,那么 
 		
-		s = s->child;
+		/*for(auto t=s->child.begin(); t!= s->child.end(); t++)
+		{
+		    if( (*t)->name == na )break;
+				
+	    }*/
+	    
+	    for(auto t=s->child.begin(); t!= s->child.end(); t++)
+	    {
+	    	if((*t)!=NULL)break;
+	    	else{
+	    		if( haveThePerson(*t,na) )break;
+			}
+		}
+	    
 	}
-	
 	return s;
+}
+
+//这个双亲的第一代后代，有这个人
+bool haveThePerson(Person* s,string na)
+{
+	for(auto t=s->child.begin(); t!= s->child.end(); t++)
+	{
+		if( (*t)->name == na )return true;		
+	}
+	return false; 
+} 
+
+//有没有孩子？？ 
+bool isHasChild(Person* s)
+{
+    for(auto t=s->child.begin(); t!= s->child.end(); t++)
+	{
+		if((*t)!=NULL)return true;		
+	    else return false;
+	}
+} 
+
+//返回第一个孩子 
+Person* firstChild(Person* s)
+{
+	//有孩子 
+	for(auto t=s->child.begin(); t!= s->child.end(); t++)
+	{
+		if( (*t) != NULL )return *t;		
+	}
+	return NULL; 
 }
 
 //子半边
 void TestTree()
 {
     root->child.push_back(CreateFamilyTree());	
-} 
+}
+
 
 int main()
 {
