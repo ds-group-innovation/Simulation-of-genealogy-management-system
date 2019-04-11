@@ -9,6 +9,7 @@ class Person{
 	public:
 		string name;                          // 姓名 
 		//char sex;
+		int flag;                             //用来标志有没有被找过,0没找过 
 	public:
 		Person *father;                       // 父亲 
         vector<Person*> brother;		      // 兄弟 
@@ -30,6 +31,7 @@ Person* CreateFamilyTree()//单边模拟
 		//cout<<"test"<<endl;
 		p = new Person;
 		p->name = n;
+		p->flag = 0; 
 		p->father = NULL;
 	    for(auto v:p->brother)
 	        v=NULL;
@@ -72,10 +74,17 @@ Person* searchPerson(string na)
 	    {
 	    	if((*t)!=NULL)break;
 	    	else{
-	    		if( haveThePerson(*t,na) )break;
+	    		if( haveThePerson(*t,na) )
+	    		{
+	    			//有; 
+				}
+				else{
+					continue;
+				} 
 			}
 		}
-	    
+	    //如果初代都没有
+	    //if( isHasChild( (s->child)[0] ) )	 
 	}
 	return s;
 }
@@ -110,6 +119,21 @@ Person* firstChild(Person* s)
 	}
 	return NULL; 
 }
+
+
+//返回这个人的孩子(如果有的话)，而且孩子没被查询过
+Person* hasChildhasoneNoSearch(Person* s)
+{
+    for(auto t=s->child.begin(); t!= s->child.end(); t++)
+	{
+		if( (*t) != NULL && (*t)->flag==0 )
+		{
+			//(*t)->flag =1; 
+		    return *t;	
+		}
+	}
+	return NULL;	
+} 
 
 //子半边
 void TestTree()
