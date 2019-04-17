@@ -115,13 +115,13 @@ Person* searchPerson(string na)
 					else
 					    temp->flag = 0; 
 				    temp = hasChildhasoneNoSearch(temp);
-					cout<<"1"<<endl; 
+					//cout<<"1"<<endl; 
 		    	}
-				cout<<"1"<<endl; 
+				//cout<<"1"<<endl; 
 			}
-			cout<<"1"<<endl;
+			//cout<<"1"<<endl;
 	    }
-	    cout<<"1"<<endl;	 
+	    //cout<<"1"<<endl;	 
 	}
 	
 }
