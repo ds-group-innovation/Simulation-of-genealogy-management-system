@@ -1,5 +1,6 @@
 #include<iostream>
 #include<vector>
+#include<malloc.h>
 #include<fstream>
 #include<cmath> 
 
@@ -307,7 +308,13 @@ int main()
 	cout<<(((root->child)[1])->child)[0]->name<<endl;
 	*/
 	
-	cout<<(((root->child)[1])->child)[0]->name<<endl;
+    root = loadFromFile();
+    cout<<endl<<"----------"<<endl;
+	//cout<<root->name<<endl;
+    
+    cout<<(((root->child)[0]->child)[0]->child)[0]->name<<endl;
+    
+	
 	
 	return 0;	
 } 
