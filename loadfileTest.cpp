@@ -1,6 +1,5 @@
 #include<iostream>
 #include<vector>
-#include<malloc.h>
 #include<fstream>
 #include<cmath> 
 
@@ -276,8 +275,6 @@ Person* loadFromFile()
 	
 	return p;
 } 
-
-
 
 int main()
 {

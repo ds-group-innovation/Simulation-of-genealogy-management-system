@@ -146,15 +146,15 @@ int main()
 	{
 		cout<<"没有这个人"<<endl;
 	}
-	/*
+	
 	cout<<endl;
-	cout<<(q->child)[0]->name<<endl;
-	cout<<(q->child)[1]->name<<endl;
+	cout<<(root->child)[0]->name<<endl;
+	/*cout<<(q->child)[1]->name<<endl;
 	
 	cout<<(((q->child)[1])->child)[0]->name<<endl;
 	*/
 	
-	cout<<(((root->child)[1])->child)[0]->name<<endl;
+	cout<<root->name<<endl;
 	
 	return 0;	
 } 
