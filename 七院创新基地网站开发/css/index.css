@@ -1,0 +1,344 @@
+
+.conTitle{
+    line-height: 70px;
+    font-size: 20px;
+    color: #222;
+    text-indent: 22px;
+}
+/* 海报区域 */
+.index-banner{
+    width: auto;
+    height: auto;
+    background-color: rgba(255,255,255,0);
+    margin: 5px auto;
+}
+.index-banner .box_skitter{
+    margin: 0 auto;
+    width: 1300px;
+    height: 450px;
+    z-index: 1;
+}
+.index-banner .box_skitter img{
+    width: 1300px;
+    height: 450px;
+}
+.index-banner .box_skitter .label_skitter p{
+    font-family: 'microsoft yahei';
+    letter-spacing: 0;
+    color: #fff;
+}
+/* 海报区域 end*/
+
+/* 最新资讯 */
+.news{
+    margin: 10px 0 20px 0;
+}
+.news .more{
+    float: right;
+    font-size: 12px;
+    color: #999;
+    margin-right: 22px;
+}
+.news .more:hover{
+    color: #1e6da7;
+}
+.news .newsList{
+    margin: 0 5px 14px 5px;
+    border-bottom: 1px solid #e9e8ea;
+    padding-bottom: 40px;
+    display: flex;
+}
+.news .newsList li{
+    flex: 1;
+    margin: 0 15px;
+    position: relative;
+    left: 40px;
+    opacity: 0;
+    transition: .7s;
+}
+.news .newsList li:nth-child(2){
+    transition-delay: .4s;
+}
+.news .newsList li:nth-child(3){
+    transition-delay: .8s;
+}
+.news .newsList .ydate{
+    float: left;
+    text-align: center;
+    font-size: 12px;
+    width: 60px;
+    padding-bottom: 6px;
+    background-color: #e3e9ec;
+    color: #023d69;
+}
+.news .newsList .ydate span{
+    display: block;
+    font-size: 24px;
+    line-height: 24px;
+    padding: 8px 0 4px 0;
+}
+.news .newsList .tn{
+    margin-left: 80px;
+}
+.news .newsList h3 a{
+    color: #22132d;
+    line-height: 22px;
+    font-size: 16px;
+}
+.news .newsList h3 a:hover{
+    color: #1e6da7;
+}
+.news .newsList p{
+    color: #777;
+    padding-top: 8px;
+    font-size: 12px;
+}
+/* 最新资讯 end*/
+
+/* 机构设置 */
+.institu{
+    margin: 10px 0 20px 0;
+}
+.institu .instituList{
+    margin: 0 5px 14px 5px;
+    border-bottom: 1px solid #e9e8ea;
+    padding-bottom: 40px;
+    display: flex;
+}
+.institu .instituList.on{
+    top: 0;
+    opacity: 1;
+}
+.institu .instituList li{
+    flex: 1;
+    margin: 0 32px;
+}
+.institu .instituList .instituItem{
+    display: block;
+    transition: .1s;
+    border: 1px solid #eaeaea;
+}
+.institu .instituList .instituItem .iconfont{
+    display: block;
+    color: #1e6da7;
+    font-size: 80px;
+    text-align: center;
+    background-color: #e3e9ec;
+}
+.institu .instituList .instituItem:hover{
+    box-shadow: 4px 4px 5px #969696;
+    transform: scale(1.03);
+}
+.institu .instituList .instituItem:hover .iconfont{
+    background-color: #1e6da7;
+    color: #fff;
+}
+.institu .instituList .instituItem:hover h3{
+    color: #1e6da7;
+}
+.institu .instituList li img{
+    width: 210px;
+    height: auto;
+    margin: 0 auto;
+}
+.institu .instituList li h3{
+    color: #22132d;
+    line-height: 22px;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+/* 机构设置 end*/
+
+/* 指导老师 */
+.index-teacher{
+    position: relative;
+    height: 550px;
+    margin-top: 10px;
+}
+.index-teacher .index-teacher-main{
+    position: relative;
+    overflow: hidden;
+    width: 1040px;
+    height: 480px;
+    margin: 0 auto;
+    z-index: 2;
+}
+.index-teacher .index-teacher-main.on{
+    top: 0;
+    opacity: 1;
+}
+.index-teacher .index-teacher-title h3{
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #222;
+    margin-top: 30px;
+}
+.index-teacher .index-teacher-title p{
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(34,34,34,.7);
+    margin-top: 15px;
+}
+.index-teacher .teacherItem{
+    width: 3000px;
+    position: absolute;
+    top: 150px;
+}
+.index-teacher .teacherItem li{
+    float: left;
+    width: 260px;
+    height: 390px;
+    overflow: hidden;
+    padding-top: 30px;
+    border-radius: 2px;
+    position: relative;
+    top: 0;
+    transition: all .2s ease-in-out;
+}
+.index-teacher .teacherItem img{
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 150px;
+}
+.index-teacher .teacherItem .teacher-info{
+    text-align: center;
+}
+.index-teacher .teacherItem h3{
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 16px;
+    color: #22132d;
+}
+.index-teacher .teacherItem p{
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 15px;
+    color: #22132d;
+}
+.index-teacher .teacherItem span{
+    text-align: left;
+    color: #22132d;
+    margin-top: 18px;
+    font-size: 12px;
+    line-height: 24px;
+    padding: 0 20px 10px 20px;
+    display: none;
+}
+.index-teacher .teacherItem li:hover{
+    background-color: #4d7695;
+    top: -150px;
+}
+.index-teacher .teacherItem li:hover span{
+    display: block;
+    color: #c9c9ca;
+}
+.index-teacher .teacherItem li:hover h3,
+.index-teacher .teacherItem li:hover p{
+    color: #fff;
+}
+.index-teacher .index-teacher-btn{
+    width: 30px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(136,136,136,.7);
+    position: absolute;
+    top: 50%;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: .3s;
+    opacity: 0;
+}
+.index-teacher .index-teacher-btn .iconfont{
+    font-size: 22px;
+    color: #fff;
+}
+.index-teacher .btn_l{
+    left: 0;
+}
+.index-teacher .btn_r{
+    right: 0;
+}
+.index-teacher:hover .btn_l,
+.index-teacher:hover .btn_r{
+    opacity: 1;
+}
+.index-teacher .index-teacher-btn:hover{
+    background-color: rgba(2,61,105,.7);
+}
+/* 指导老师 end*/
+
+.institu .instituList,
+.index-teacher .index-teacher-main{
+    position: relative;
+    top: 30px;
+    opacity: 0;
+    transition: .7s;
+}
+.institu.on .instituList,
+.index-teacher.on .index-teacher-main{
+    top: 0;
+    opacity: 1;
+}
+
+/* 播放视频区域 */
+.viewLive{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    left: 0;
+    top: 65%;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgba(2,61,105,.7);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: none;
+    z-index: 10;
+}
+.viewLive:hover{
+    background-color: rgba(18,93,148,.7);
+}
+.viewLive .icon-shipinbofang{
+    font-size: 50px;
+}
+.viewLive span{
+    position: relative;
+    top: -10px;
+    font-size: 14px;
+}
+#videoModal{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+#videoModal .modal-dialog{
+    margin: 0;
+    padding: 0;
+    width: 1000px;
+}
+#videoModal .close{
+    font-size: 90px;
+    height: 0;
+    color: #0b78ca;
+    opacity: .5;
+    text-shadow: 0 0 0 #0b78ca;
+    position: relative;
+    left: 68px;
+    top: -30px;
+}
+#videoModal .close:hover{
+    opacity: .7;
+}
+#videoModal #video{
+    width: 1000px;
+}
+/* 播放视频区域 end*/
